@@ -17,16 +17,23 @@ sandwich2("pb") // => "One sandwich with tomato and pb"
 
 ***********************************************************************/
 
-function sandwichMaker(testItem) {
-  let item = "One sandwich with tomato";
-    const addItem = itemstr => {
-      item += ' and ' + itemstr;
-      console.log(item);
-    }
-    return addItem;
-  }
-const myFunc = sandwichMaker();
-  myFunc('spinach');
+function sandwichMaker() {
+  let ingredients = ["tomato"];
+
+  return function(ingredient) {
+    ingredients.push(ingredient);
+    // The push() method of Array instances adds the
+    // specified elements to the end of an array and
+    // returns the new length of the array.
+
+    return "One sandwich with " + ingredients.join(" and ");
+    // The join() method of Array instances creates and returns
+    // a new string by concatenating all of the elements in
+    // this array, separated by commas or a specified separator
+    // string. If the array has only one item, then that item will
+    // be returned without using the separator.
+  };
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
