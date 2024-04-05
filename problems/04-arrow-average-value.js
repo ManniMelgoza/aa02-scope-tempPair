@@ -9,7 +9,14 @@ arrowAvgValue([10, 20]); // => 15
 arrowAvgValue([2, 3, 7]); // => 4
 arrowAvgValue([100, 60, 64]); // => 74.66666666666667
 ***********************************************************************/
+const arrowAvgValue = (array) => {
+  let total = 0;
+  for(let num of array) {
+    total += num;
 
+  }
+return total / array.length;
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
